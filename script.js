@@ -37,3 +37,25 @@ function applyLP(player, operation){
     }
     currentInput = "";
 }
+
+
+function halveLP(player){
+    if(player === 1){
+        LP1 = Math.ceil(LP1 / 2);
+        p1Display.innerText = LP1;   
+    }else if (player === 2){
+        LP2 = Math.ceil(LP2 / 2);
+        p2Display.innerText = LP2;
+    }
+
+    currentInput = "";
+}
+
+
+function ResetDuel(){
+    LP1 = 8000;
+    LP2 = 8000;
+    currentInput = "";
+    p1Display.innerText = LP1;
+    p2Display.innerText = LP2;
+}
