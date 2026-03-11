@@ -21,18 +21,32 @@ function applyLP(player, operation){
             LP1 += inputNum;
         }else if (operation === '-'){
             LP1 -= inputNum;
+            if(LP1 < 0){
+                LP1 = 0;
+            }
         }
         
         p1Display.innerText = LP1;
+
+        if(LP1 === 0){
+            setTimeout(() => alert("Duelist 1 Lost"), 50);
+        }
 
     }else if (player === 2){
         if (operation === '+'){
             LP2 += inputNum;
         }else if (operation === '-'){
             LP2 -= inputNum;
+            if(LP2 < 0){
+                LP2 = 0;
+            }
         }
 
         p2Display.innerText = LP2;
+
+        if(LP2 === 0){
+            setTimeout(() => alert("Duelist 1 Lost"), 50);
+        }
 
     }
     currentInput = "";
