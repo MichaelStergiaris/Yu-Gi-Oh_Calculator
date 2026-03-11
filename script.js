@@ -3,29 +3,24 @@ let LP2 = 8000;
 
 let currentInput = "";
 
-const p1Display = document.getElementById("LP1");
-const p2Display = document.getElementById("LP2");
-
-function addNum(num){
-    currentInput += num;
-    console.log("The number you wrote is:", currentInput);
-}
+const p1Display = document.getElementById("LifePoints1");
+const p2Display = document.getElementById("LifePoints2");
 
 function applyLP(player, operation){
-    if (currentInput === "") return;
+    if(currentInput === "") return;
 
-    let inputNum = Number(currentInput);
-    
-    if (player === 1){
-        if (operation === '+'){
-            LP1 += inputNum;
-        }else if (operation === '-'){
-            LP1 -= inputNum;
+    let inputNumber = Number(currentInput);
+
+    if(player === 1){
+        if (operation === '+') {
+            LP1 += inputNumber;
+        } else if (operation === '-') {
+            LP1 -= inputNumber;
             if(LP1 < 0){
                 LP1 = 0;
             }
         }
-        
+
         p1Display.innerText = LP1;
 
         if(LP1 === 0){
@@ -45,7 +40,7 @@ function applyLP(player, operation){
         p2Display.innerText = LP2;
 
         if(LP2 === 0){
-            setTimeout(() => alert("Duelist 1 Lost"), 50);
+            setTimeout(() => alert("Duelist 2 Lost"), 50);
         }
 
     }
