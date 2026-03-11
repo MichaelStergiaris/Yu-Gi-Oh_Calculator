@@ -6,16 +6,21 @@ let currentInput = "";
 const p1Display = document.getElementById("LifePoints1");
 const p2Display = document.getElementById("LifePoints2");
 
+function addNum(num) {
+    currentInput += num;
+    console.log("The number you typed is: " + currentInput);
+}
+
 function applyLP(player, operation){
     if(currentInput === "") return;
 
-    let inputNumber = Number(currentInput);
+    let inputNum = Number(currentInput);
 
     if(player === 1){
         if (operation === '+') {
-            LP1 += inputNumber;
+            LP1 += inputNum;
         } else if (operation === '-') {
-            LP1 -= inputNumber;
+            LP1 -= inputNum;
             if(LP1 < 0){
                 LP1 = 0;
             }
