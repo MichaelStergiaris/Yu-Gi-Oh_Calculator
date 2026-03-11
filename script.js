@@ -3,8 +3,8 @@ let LP2 = 8000;
 
 let currentInput = "";
 
-const p1Display = document.getElementById("lpPlayer1");
-const p2Display = document.getElementById("lpPlayer2");
+const p1Display = document.getElementById("LP1");
+const p2Display = document.getElementById("LP2");
 
 function addNum(num){
     currentInput += num;
